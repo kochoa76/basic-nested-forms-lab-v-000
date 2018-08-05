@@ -20,6 +20,11 @@ class RecipesController < ApplicationController
         redirect_to recipe_path(@recipe)
       else
         render :new
-      end 
+      end
   end
+
+  private
+
+    def recipe_params
+      params.require(:recipe).permit(:title, :ingredients=>[:name, :quantity])
 end

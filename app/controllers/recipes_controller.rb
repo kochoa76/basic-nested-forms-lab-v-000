@@ -15,11 +15,11 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe= Recipe.new 
-      if @recipe.save 
+    @recipe= Recipe.new
+      if @recipe.save
         redirect_to recipe_path(@recipe)
-      else 
-        render :new 
+      else
+        render :new
       end 
   end
 end

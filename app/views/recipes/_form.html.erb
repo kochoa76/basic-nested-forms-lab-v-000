@@ -4,8 +4,8 @@
   <ul>
   <%= f.fields_for :ingredients do |ingr| %>
   <li>
-  name: <%= ingr.text_field :ingredient_name %>
-  quantity: <%= ingr.text_field :ingredient_quantity %>
+  name: <%= ingr.text_field :name %>
+  quantity: <%= ingr.text_field :quantity %>
 </li>
   <% end %>
 </ul> 

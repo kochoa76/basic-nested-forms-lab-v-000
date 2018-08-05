@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
+    @recipe.ingredients.build(ingredient: 'name')
+    @recipe.ingredients.build(ingredient: 'name')
   end
 
   def index
